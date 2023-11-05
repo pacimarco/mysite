@@ -1,0 +1,28 @@
+<!--<header class="header">
+  <a href="#" class="logo">Logo</a>
+  <i class="bx bx-menu" id="menu-icon"></i>
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Gallery</a>
+    <a href="#">Room 3D</a>
+    <a href="#">Contacts</a>
+  </nav>
+</header>
+<div class="nav-bg">
+
+</div> -->
+
+<header class="header">
+  <a href="#" class="logo"><img src="../../../assets/pic/LOGO5.PNG" alt=""></a>
+  <i class="bx bx-menu" id="menu-icon" (click)="toggleMenu()" [ngClass]="{'bx-x': isActive}"></i>
+  <nav class="navbar" [ngClass]="{'active': isActive}">
+    <a href="#" (click)="setActiveLink('Home'); $event.preventDefault()" [ngClass]="{'active-link': activeLink === 'Home'}">Home</a>
+    <a href="#" (click)="setActiveLink('About')" [ngClass]="{'active-link': activeLink === 'About'}">About</a>
+    <a href="#" (click)="setActiveLink('Gallery')" [ngClass]="{'active-link': activeLink === 'Gallery'}">Gallery</a>
+    <a href="#" (click)="setActiveLink('Room')" [ngClass]="{'active-link': activeLink === 'Room'}">Room 3D</a>
+    <a href="#" (click)="setActiveLink('Contacts')" [ngClass]="{'active-link': activeLink === 'Contacts'}">Contacts</a>
+  
+  </nav>
+</header>
+<div class="nav-bg" [ngClass]="{'active': isActive}"></div>
